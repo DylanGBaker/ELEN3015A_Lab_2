@@ -1,0 +1,28 @@
+function [g,a,b] = Extended_Euclidean_Int(v,u)
+remainderIsZero = false;
+remainders = [v,u];
+a_variable = [1,0];
+b_variable = [0,1];
+i = 1;
+while ~remainderIsZero
+    j = 1;     
+    %Iterate for the multiplicative inverses.
+    if i >=3 && j == 1
+        remainder = remainders(1, i - 2) - (remainders(1, i - 1) * floor (remainders(1, i - 2)/remainders(1, i - 1)))
+        quotient = floor(v/u);
+        current_a_value = a_variable(1, i - 2) - (a_variable(1, i - 1) * quotient);
+        current_b_value = b_variable(1, i - 2) - (b_variable(1, i - 1) * quotient);
+        a_variable(1,i) = current_a_value;
+        b_variable(1,i) = current_b_value;
+        j = j -1;
+    end
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if remainder == 0
+        remainderIsZero = true;
+    end
+    i = i + 1;
+end
+g = v;
+a = current_a_value;
+b = current_b_value;
+end

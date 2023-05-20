@@ -9,7 +9,7 @@ while ~remainderIsZero
     j = 1;     
     %Iterate for the multiplicative inverses.
     if i >=3 && j == 1
-        remainder = remainders(1, i - 2) - (remainders(1, i - 1) * floor (remainders(1, i - 2)/remainders(1, i - 1)));
+        remainder = remainders(1, i - 2) - (remainders(1, i - 1) * floor(remainders(1, i - 2)/remainders(1, i - 1)));
         remainders(1,i) = remainder;
         quotient = floor(v/u);
         v = u;

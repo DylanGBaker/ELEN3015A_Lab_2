@@ -60,6 +60,5 @@ a = cell2mat(a_variable(1, i - 2));
 b = cell2mat(b_variable(1, i - 2));
 ax = gfconv(pol1,b,field);
 by = gfconv(pol2,a,field);
-verification = gfadd(ax,by,field)
-verification2 = gfconv(pol1, a, field)
+
 end

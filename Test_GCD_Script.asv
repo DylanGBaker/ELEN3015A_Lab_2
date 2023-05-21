@@ -1,0 +1,24 @@
+function Test_GCD_Script(v,u)
+%This script will test my implementented script answers for the Extended Euclidean
+%Algorithm against Matlabs built in function. 5 different tests will be
+%done to ensure that my algorithm works. This is for the one where integer
+%values are the inputs. The variables "g,a,b" will be my output values and
+%the variables "mg,ma,mb" will be matlabs out put variables.
+
+%Test 1
+[g1,a1,b1] = Extended_Euclidean_Int()
+[mg1,ma1,mb1] = gcd()
+%Test 2
+[g2,a2,b3] = Extended_Euclidean_Int()
+[mg2,ma2,mb2] = gcd()
+%Test 3
+[g1,a1,b1] = Extended_Euclidean_Int()
+[mg1,ma1,mb1] = gcd()
+%Test 4
+[g1,a1,b1] = Extended_Euclidean_Int()
+[mg1,ma1,mb1] = gcd()
+%Test 5
+[g5,a5,b5] = Extended_Euclidean_Int()
+[mg1,ma1,mb1] = gcd()
+
+end

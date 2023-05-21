@@ -30,29 +30,21 @@ by = gfconv(p2,b3,field);
 sum3 = gfadd(ax,by,field)
 
 %Test 4
-
-p1 = [2 0 9 0 6 0 12 0 14];
-p2 = [12 0 0 -Inf -Inf -Inf 13];
+%{
+p1 = [0 0 0 0 0 0 0 0 14];
+p2 = [0 0 0 -Inf -Inf -Inf 13];
 [g4,a4,b4] = Extended_Euclidean_GF(p1,p2,field)
-ax = gfconv(p1,a4,field);
-by = gfconv(p2,b4,field); 
-sum4 = gfadd(ax,by,field)
+ax = gfconv(p1,a1,field);
+by = gfconv(p2,b1,field); 
+sum1 = gfadd(ax,by,field)
 
 
 %Test 5
-p1 = [0 5 5 -Inf -Inf -Inf -Inf -Inf -Inf -Inf 13];
-p2 = [-Inf -Inf -Inf -Inf -Inf 5 3 7 10 14];
-[g5,a5,b5] = Extended_Euclidean_GF(p1,p2,field)
-ax = gfconv(p1,a5,field);
-by = gfconv(p2,b5,field); 
-sum5 = gfadd(ax,by,field)
-
-%Test 6
-p1 = [1 0];
+p1 = [0 0];
 p2 = [0 0 0];
-[g6,a6,b6] = Extended_Euclidean_GF(p1,p2,field)
-ax = gfconv(p1,a6,field);
-by = gfconv(p2,b6,field); 
-sum6 = gfadd(ax,by,field)
-
+[g5,a5,b5] = Extended_Euclidean_GF(p1,p2,field)
+ax = gfconv(p1,a1,field);
+by = gfconv(p2,b1,field); 
+sum1 = gfadd(ax,by,field)
+%}
 end

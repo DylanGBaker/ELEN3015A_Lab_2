@@ -1,7 +1,7 @@
 function Test_GCD_GF_Script()
 %This script will be used to run tests on the implemented Extended
 %Euclidean Algorithm for the Galois Field GF(2^4) using the primitive
-%polynomial of x^3 + x + 1. 5 Test will be run like in the Test_GCD_Script
+%polynomial of x^3 + x + 1. 8 Test will be run like in the Test_GCD_Script
 %to ensure confidence in the algorithm.
 
 field = gftuple([-1:2^4-2]', 4, 2);
@@ -54,5 +54,21 @@ p2 = [0 0 0];
 ax = gfconv(p1,a6,field);
 by = gfconv(p2,b6,field); 
 sum6 = gfadd(ax,by,field)
+
+%Test 7
+p1 = [1 0];
+p2 = [0 0 0 8 9 10 12 14 8 0];
+[g7,a7,b7] = Extended_Euclidean_GF(p1,p2,field)
+ax = gfconv(p1,a7,field);
+by = gfconv(p2,b7,field); 
+sum7 = gfadd(ax,by,field)
+
+%Test 8
+p1 = [2 2 2];
+p2 = [2 2 2];
+[g8,a8,b8] = Extended_Euclidean_GF(p1,p2,field)
+ax = gfconv(p1,a8,field);
+by = gfconv(p2,b8,field); 
+sum8 = gfadd(ax,by,field)
 
 end
